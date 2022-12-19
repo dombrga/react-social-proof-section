@@ -1,0 +1,19 @@
+{
+  "ratings": [
+    {
+      "id": 0,
+      "stars": 5,
+      "site": "Reviews"
+    },
+    {
+      "id": 1,
+      "stars": 5,
+      "site": "Report Guru"
+    },
+    {
+      "id": 2,
+      "stars": 5,
+      "site": "BestTech"
+    }
+  ]
+}

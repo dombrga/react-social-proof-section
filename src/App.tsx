@@ -1,13 +1,23 @@
 import { useState } from 'react'
-import logo from './logo.svg'
 import './App.scss'
+import Review from './components/review/Review'
+import Rating from './components/rating/Rating'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className='app'>
+      <main>
+        <div className=''>
 
+        </div>
+        <div className='ratings'>
+          <Rating />
+        </div>
+        <div className='reviews'>
+          <Review />
+        </div>
+      </main>
     </div>
   )
 }

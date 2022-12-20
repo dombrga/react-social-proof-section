@@ -1,5 +1,32 @@
+@import './assets/styles/variables.scss';
+
 .app {
   padding: 1rem;
+  font-family: $font-family-primary;
+}
+
+main {
+  padding: 3rem;
+}
+
+.overview {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  display: grid;
+  gap: .75rem 0;
+
+  > h1 {
+    color: $bg-primary-500;
+    font-size: 2.5rem;
+    line-height: 30px;
+    letter-spacing: .1px;
+  }
+  > p {
+    color: $neutral-400;
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
 }
 
 .ratings {

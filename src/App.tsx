@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import './App.scss'
+import styles from './App.module.scss'
 import ReviewCard from './components/review/Review'
 import RatingCard from './components/rating/Rating'
 import { Rating, Review } from './models/models'
@@ -30,12 +30,12 @@ function App() {
 
 
   return (
-    <div className='app'>
+    <div className={styles.app}>
       <main>
         <div className=''>
 
         </div>
-        <div className='ratings'>
+        <div className={styles.ratings}>
           {ratings.map((rating: Rating) => {
             return <RatingCard key={rating.id} rating={rating} />
           })}

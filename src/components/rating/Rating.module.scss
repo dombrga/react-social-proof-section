@@ -1,0 +1,26 @@
+@import '../../assets/styles/variables.scss';
+
+.rating {
+  background-color: $bg-neutral-300;
+  border-radius: .4rem;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: .75rem 0;
+  padding: .5rem;
+}
+
+.rating__stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 .4rem;
+}
+
+.rating__site {
+  font-family: $font-family-primary;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: $bg-primary-500;
+}

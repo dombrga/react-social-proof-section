@@ -1,3 +1,6 @@
+# scripts
+*.sh 
+
 # Logs
 logs
 *.log

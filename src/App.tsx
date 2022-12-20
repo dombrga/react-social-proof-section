@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.scss'
 import ReviewCard from './components/review/Review'
 import RatingCard from './components/rating/Rating'
-import { Review } from './models/models'
+import { Rating, Review } from './models/models'
 
 function App() {
   const [reviews, setReviews] = useState<Review[]>([])
@@ -36,7 +36,9 @@ function App() {
 
         </div>
         <div className='ratings'>
-          <RatingCard />
+          {ratings.map((rating: Rating) => {
+            return <RatingCard key={rating.id} rating={rating} />
+          })}
         </div>
         <div className='reviews'>
           {

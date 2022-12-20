@@ -1,8 +1,10 @@
-function RatingCard({ }) {
+import { Rating } from "../../models/models"
+
+function RatingCard({ rating }: { rating: Rating}) {
   return (
     <div>
       <div></div>
-      <p></p>
+      <p>{rating.id}</p>
     </div>
   )
 }

@@ -1,9 +1,9 @@
 
-function Review({ }) {
+function ReviewCard({ review }: {review :any}) {
   return (
     <article className='review'>
       <div className='review__name'>
-        <p></p>
+        <p> {review.name} </p>
       </div>
       <p className='review__description'>
 
@@ -12,4 +12,4 @@ function Review({ }) {
   )
 }
 
-export default Review
+export default ReviewCard

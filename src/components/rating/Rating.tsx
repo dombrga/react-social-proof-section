@@ -1,4 +1,4 @@
-function Ratings({ }) {
+function RatingCard({ }) {
   return (
     <div>
       <div></div>
@@ -7,4 +7,4 @@ function Ratings({ }) {
   )
 }
 
-export default Ratings
+export default RatingCard

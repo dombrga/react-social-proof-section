@@ -1,0 +1,13 @@
+@import '../../assets/styles/variables.scss';
+
+.review {
+  border-radius: .5rem;
+  background-color: $bg-primary-500;
+
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.review__reviewer {
+  display: flex;
+}

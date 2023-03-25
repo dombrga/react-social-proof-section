@@ -3,6 +3,7 @@ export interface Review {
   name: string
   isVerifiedBuyer: boolean
   reviewContent: string
+  image: string
 }
 
 export interface Rating {

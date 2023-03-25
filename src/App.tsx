@@ -6,7 +6,7 @@ import { Rating, Review } from './models/models'
 
 function App() {
   const [reviews, setReviews] = useState<Review[]>([])
-  const [ratings, setRatings] = useState([])
+  const [ratings, setRatings] = useState<Rating[]>([])
 
   useEffect(() => {
     const loadData = async () => {
@@ -19,12 +19,8 @@ function App() {
       setRatings(data[1].ratings)
       return data
     }
-
-    try {
-      loadData()
-    } catch (err) {
-      console.error('Error:', err)
-    }
+    
+    loadData().catch(e => console.error(e))
 
   }, [])
 

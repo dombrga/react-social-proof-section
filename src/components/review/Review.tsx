@@ -1,12 +1,29 @@
+import { Review } from "../../models/models"
+import style from './Review.module.scss'
 
-function ReviewCard({ review }: {review :any}) {
+
+const imagePrefix = '/images/'
+
+interface props {
+  review: Review
+}
+
+function ReviewCard({ review }: props) {
+  const image = imagePrefix + review.image
+  
   return (
-    <article className='review'>
-      <div className='review__name'>
-        <p> {review.name} </p>
+    <article className={style.review}>
+      <div className={style.review__reviewer}>
+        <img src={image} alt="" className="avatar" />
+        <div>
+          <p>{ review.name }</p>
+          { review.isVerifiedBuyer && <p>Verified Buyer</p> }
+        </div>
       </div>
-      <p className='review__description'>
-
+      <p className='review__content'>
+        <q>
+          { review.reviewContent }
+        </q>
       </p>
     </article>
   )

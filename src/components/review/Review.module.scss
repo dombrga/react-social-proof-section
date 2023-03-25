@@ -1,6 +1,7 @@
 @import '../../assets/styles/variables.scss';
 
 .review {
+  color: $bg-neutral-300;
   border-radius: .5rem;
   background-color: $bg-primary-500;
 
@@ -10,4 +11,29 @@
 
 .review__reviewer {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .75rem 1rem;
+
+  margin-bottom: 1rem;
+
+  .review__reviewer_avatar {
+    border-radius: 50%;
+    width: 50px;
+  }
+
+  .review__reviewer_info {
+    
+  }
+  .review__reviewer_verified {
+    color: $primary-400;
+  }
+}
+
+q::before {
+  margin-right: .2rem;
+}
+
+q::after {
+  margin-left: .2rem;
 }

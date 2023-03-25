@@ -1,12 +1,12 @@
 @import './assets/styles/variables.scss';
 
 .app {
-  padding: 1rem;
+  // padding: 1rem;
   font-family: $font-family-primary;
 }
 
 main {
-  padding: 3rem;
+  padding: 1.5rem;
 }
 
 .overview {
@@ -19,6 +19,7 @@ main {
   > h1 {
     color: $bg-primary-500;
     font-size: 2.5rem;
+    // ask
     line-height: 30px;
     letter-spacing: .1px;
   }

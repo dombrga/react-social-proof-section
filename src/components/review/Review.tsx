@@ -2,7 +2,7 @@ import { Review } from "../../models/models"
 import style from './Review.module.scss'
 
 
-const imagePrefix = '/images/'
+const imagePrefix = 'images/'
 
 interface props {
   review: Review

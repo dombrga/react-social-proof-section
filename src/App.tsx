@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
-import styles from './App.module.scss'
+import style from './App.module.scss'
 import ReviewCard from './components/review/Review'
 import RatingCard from './components/rating/Rating'
 import { Rating, Review } from './models/models'
+
+const reviewClass = [style['reviews'], style['grid-col-span-2']].join(' ')
 
 function App() {
   const [reviews, setReviews] = useState<Review[]>([])
@@ -14,21 +16,19 @@ function App() {
         fetch('./data/reviews.json').then(res => res.json()),
         fetch('./data/ratings.json').then(res => res.json()),
       ])
-      console.log('all:', data);
+      console.log('data:', data);
       setReviews(data[0].reviews)
       setRatings(data[1].ratings)
-      return data
     }
     
-    loadData().catch(e => console.error(e))
-
+    loadData().catch((e: Error) => console.error(e))
   }, [])
 
 
   return (
-    <div className={styles.app}>
+    <div className={style.app}>
       <main>
-        <div className={styles.overview}>
+        <div className={style.overview}>
           <h1>
             10,000+ of our users love our products.
           </h1>
@@ -36,12 +36,14 @@ function App() {
             We only provide great products combined with excellent customer service. See what our satisfied customers are saying about our services.
           </p>
         </div>
-        <div className={styles.ratings}>
+
+        <div className={style.ratings}>
           {ratings.map((rating: Rating) => {
             return <RatingCard key={rating.id} rating={rating} />
           })}
         </div>
-        <div className='reviews'>
+
+        <div className={reviewClass}>
           {
             reviews.map(review => {
               return <ReviewCard key={review.id} review={review} />

@@ -5,22 +5,31 @@
   font-family: $font-family-primary;
 }
 
+
 main {
   padding: 1.5rem;
+  max-width: 700px;
+  margin: 0 auto;
+  background: url('./assets/images/bg-pattern-top-mobile.svg') no-repeat top center,
+              url('./assets/images/bg-pattern-bottom-mobile.svg') no-repeat bottom center;
+
+  display: grid;
+  gap: 1rem 1rem;
 }
+
 
 .overview {
   text-align: center;
-  margin-bottom: 2rem;
-
+  
   display: grid;
   gap: .75rem 0;
-
+  margin-bottom: 2rem;
+  
   > h1 {
     color: $bg-primary-500;
     font-size: 2.5rem;
-    // ask
-    line-height: 30px;
+    // ask line-height, problem of overflow
+    // line-height: 100%;
     letter-spacing: .1px;
   }
   > p {
@@ -33,4 +42,60 @@ main {
 .ratings {
   display: grid;
   gap: 1.5rem 1.5rem;
+
+  margin-bottom: 3rem;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem 1.5rem;
+}
+
+@media (min-width: 375px) {
+  main {
+    background: url('./assets/images/bg-pattern-top-desktop.svg') no-repeat top left,
+    url('./assets/images/bg-pattern-bottom-desktop.svg') no-repeat bottom right;
+  }
+}
+
+@media (min-width: 900px) {
+  main {
+    padding: 5rem;
+    max-width: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ratings {
+    > :nth-child(1) { 
+      justify-self: start; 
+    }
+    > :nth-child(2) { 
+      justify-self: center; 
+    }
+    > :nth-child(3) { 
+      justify-self: end; 
+    }
+  }
+  
+  .reviews {
+    height: 275px;
+    grid-column: span(2);
+    flex-direction: row;
+
+    :nth-child(1) { 
+      align-self: flex-start;
+    }
+    :nth-child(2) { 
+      align-self: center;
+    }
+    :nth-child(3) { 
+      align-self: flex-end;
+    }
+  }
+
+  .grid-col-span-2 {
+    grid-column: span 2;
+  }
 }

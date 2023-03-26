@@ -4,18 +4,25 @@
   background-color: $bg-neutral-300;
   border-radius: .4rem;
 
-  display: grid;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: .75rem 0;
-  padding: .5rem;
+  gap: .75rem 1rem;
+  padding: .75rem 1.75rem;
+}
+
+@media (min-width: 900px) {
+  .rating {
+    min-width: 300px;
+    flex-direction: row;
+  }
 }
 
 .rating__stars {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   gap: 0 .4rem;
 }
 
@@ -24,4 +31,10 @@
   font-weight: 700;
   font-size: 1.1rem;
   color: $bg-primary-500;
+}
+
+@media (max-width: 375px) {
+  .rating__stars {
+    flex-wrap: wrap;
+  }
 }

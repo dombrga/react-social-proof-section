@@ -10,11 +10,12 @@ interface props {
 
 function ReviewCard({ review }: props) {
   const image = imagePrefix + review.image
+  const avatarAlt = `avatar of${review.name}`
   
   return (
     <article className={style.review}>
       <div className={style.review__reviewer}>
-        <img src={image} alt="" className={style.review__reviewer_avatar} />
+        <img src={image} alt={avatarAlt} className={style.review__reviewer_avatar} />
         <div className={style.review__reviewer_info}>
           <p className={style.review__reviewer_name}>{ review.name }</p>
           { review.isVerifiedBuyer && <p className={style.review__reviewer_verified}>Verified Buyer</p> }

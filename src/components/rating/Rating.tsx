@@ -11,7 +11,7 @@ function RatingCard({ rating }: props) {
     <div className={`${style.rating}`}>
       <div className={`${style.rating__stars}`}>
         {
-          Array.from(Array(rating.stars)).map((star, idx) => {
+          Array.from(Array(rating.stars)).map((_, idx) => {
             return <img src={IconStar} key={idx} alt="star" />
           })
         }

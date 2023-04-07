@@ -16,7 +16,7 @@ function App() {
         fetch('./data/reviews.json').then(res => res.json()),
         fetch('./data/ratings.json').then(res => res.json()),
       ])
-      console.log('data:', data);
+      // console.log('data:', data);
       setReviews(data[0].reviews)
       setRatings(data[1].ratings)
     }
